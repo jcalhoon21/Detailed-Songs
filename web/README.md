@@ -3,10 +3,12 @@ Using React-Redux, display song titles and details about each song
 
 # Installs
 yarn install
+
 npm install --save redux react-redux
 
 # To Deploy
 cd web
+
 yarn start
 
 
