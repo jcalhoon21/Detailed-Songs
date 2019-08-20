@@ -1,3 +1,25 @@
+# Detailed-Songs
+Using React-Redux, display song titles and details about each song
+
+# Installs
+yarn install
+npm install --save redux react-redux
+
+# To Deploy
+cd web
+yarn start
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
