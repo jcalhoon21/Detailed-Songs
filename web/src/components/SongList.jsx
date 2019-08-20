@@ -30,13 +30,15 @@ class SongList extends React.Component {
 // could be called anything it wants, by conevention its mapStateToProps
 // state contains all of the data inside the redux store
 const mapStateToProps = (state) => {
-    console.log(state);
-    return { songs: state.songs }; // acts as props in the songlist component
+    return { 
+        songs: state.songs   // acts as props in the songlist component
+    }; 
 };
 
 export default connect(
         mapStateToProps, 
         { selectSong }  // ES6 syntax shortened selectSong from identifying a key `selectSong: selectSong`
+                        // have to pass an action creator through the connect() so the dispatch knows
 )(SongList); 
 
 //always going to have mapstatetoprops, that takes in state
