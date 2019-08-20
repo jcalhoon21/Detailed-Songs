@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { selectSong } from '../actions';
 
 class SongList extends React.Component {
     renderList() {
@@ -7,8 +8,10 @@ class SongList extends React.Component {
             return (
                 <div className='item' key={ song.title }>
                     <div className='right floated content'>
-                        <button className='ui button primary'>
-                            SELECT
+                        <button 
+                            className='ui button primary'
+                            onClick={() => this.props.selectSong(song)} >
+                                SELECT
                         </button>
                     </div>
                     <div className='content'>
@@ -27,10 +30,14 @@ class SongList extends React.Component {
 // could be called anything it wants, by conevention its mapStateToProps
 // state contains all of the data inside the redux store
 const mapStateToProps = (state) => {
+    console.log(state);
     return { songs: state.songs }; // acts as props in the songlist component
 };
 
-export default connect(mapStateToProps)(SongList);
+export default connect(
+        mapStateToProps, 
+        { selectSong }  // ES6 syntax shortened selectSong from identifying a key `selectSong: selectSong`
+)(SongList); 
 
 //always going to have mapstatetoprops, that takes in state
 //always going to return in mapstatetoprops what will be considered props in the component
