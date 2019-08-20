@@ -1,8 +1,12 @@
 import React from 'react';
-//import { selectSong } from '../actions'; // {} means youre exporting a named function ... VS no {} which would be an export default
+import SongList from './SongList';
 
 const App = () => {
-  return <div>App</div>
+  return (
+    <div>
+      <SongList />
+    </div>
+  );
 };
 
 export default App;
